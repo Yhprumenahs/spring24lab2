@@ -1,26 +1,31 @@
 #include "mbed.h"
 #include <cstdio>
 
-int n_1 = 0;
-int n_2 = 1;
-int n_3 = 0;
 int max_value = 10;
 
+int fib(int n){
+    if(n == 0 || n ==1) {
+        return n;
+    }
+else{
+    return (fib(n-1) + fib(n-2));
+}
+}
 int main()
 {
     printf("lab 2 start!! \r\n");
 
-    printf("series is: %d, %d,",n_1, n_2);
-
-    for(int i=3; i<=max_value; i++) {
-        n_3 = n_1 + n_2;
-        printf("%d,", n_3);
-        n_1 = n_2;
-        n_2 = n_3;
+    printf("series is:");
+    for (int i=0; i<max_value; i++){
+        printf("%d , fib(i)");
     }
+
+   
+    
     printf("\r\n")
     while (true){
 
     }
 }
+
 
